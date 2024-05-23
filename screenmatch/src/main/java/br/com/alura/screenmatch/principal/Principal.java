@@ -101,17 +101,8 @@ public class Principal {
         temporadas.forEach(System.out::println);
     }
 
-<<<<<<< HEAD
     private void listarSeriesBuscadas(){
         List<Serie> series = repositorio.findAll();
-=======
-    private void listarSeriesBuscadas() {
-        List<Serie>series= new ArrayList<>();
-        series = dadosSeries.stream()
-                        .map(d -> new Serie(d))
-                                .collect(Collectors.toList());
-
->>>>>>> c1988da (Adding new features and resources to the application)
         series.stream()
                 .sorted(Comparator.comparing(Serie::getGenero))
                 .forEach(System.out::println);
